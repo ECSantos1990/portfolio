@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body
+        {
+        background-image: linear-gradient(
+            to right top,
+            #2596be,
+            #358bbc,
+            #4780b8,
+            #5974b0,
+            #6867a4,
+            #76609e,
+            #835996,
+            #8e518c,
+            #9e4d86,
+            #ac4a7e,
+            #b94774,
+            #c34668
+            );
+        }
+        .formContainer {
+            border-radius: 12px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+            padding: 5px;
+            width: 80%;
+            margin: auto;
+            height: 100vh;
+        }
+        .formHeading {
+            padding: 0 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        
+        }
+
+        .formHeading h2 {
+            font-size: 32px;
+            text-align: center;
+        }
+        table, th, td {
+         
+            margin: auto;
+            text-align: left;
+        }
+        th, td {
+        padding: 5px;
+        }
+        input[type="text"] ,input[type="date"], input[type="number"] {
+            width: 100%;
+            height: 35px;
+            background-color: bisque;
+            font-size: larger;
+        }
+
+        select{
+            width: 100%;
+            height: 80px;
+            background-color: bisque;
+            font-size: 15px;
+        }
+
+        table{
+            width: 80%;
+
+        }
+        .buttons
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+        input[type="reset"] , input[type="submit"], input[type="button"]{
+            padding: 10px;
+            width: 20%;
+            margin-top: 23px;
+            border-radius: 6px;
+            font-size: large;
+            background-color: rgb(252, 154, 170);
+        }    
+        
+        span{
+			display: block;
+		    margin-left: 20px;
+		    color: rgb(225, 212, 212);;
+		    font-style: italic;
+		}
+
+       
+    </style>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Patient Form</title>
+</head>
+<body>
+    <div class="formContainer">
+        <div class="formHeading">
+            <h2>Patient Registration Form</h2>
+            <input id="btnLogout" type="button" value="Log Out" >
+        </div>
+        <div class="formInputs">
+            <form action="patient.html" id="patientForm" >
+                <table >
+                    <tr>
+                        <th><label for="firstName">First Name </label></th>
+                        <th><label for="middleName">Middle Name </label></th>
+                        <th><label for="lastName">Last Name </label></th>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="firstName" required>
+                        <span></span>
+                        </td>
+                        <td><input type="text" name="middleName" required>
+                        <span></span></td>
+                        <td><input type="text" name="lastName" required>
+                        <span></span></td>
+                    </tr>
+                    <tr>
+                        <th colspan="3"><label for="address">Address </label></th>
+                   </tr>
+                     <tr>
+                         <td colspan="3"><input type="text" name="address" required>
+                            <span></span></td>
+                     </tr>
+                     <tr>
+                        <th><label for="birthday">Birth Date </label></th>
+                        <th><label for="contactNo">Contact No.</label></th>
+                        <th>Gender</th>
+                     </tr>
+                     <tr>
+                        <td> <input type="date" name="birthday" name="birthday">
+                        <span></span></td> 
+                        <td> <input type="number" name="contactNo" name="contactNo" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==11) return false;" /><span></span></td> 
+                        <td>  <input type="radio" name="gender" value="male">
+                            <label for="gender">Male</label>
+                            <input type="radio" name="gender" value="female">
+                            <label for="gender">Female</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th colspan="3">Medical History</th>
+                    </tr>
+                    <tr>
+                        <td ><input type="checkbox" name="medicalHistory" value="asthma">
+                            <label for="asthma"> Asthma</label><br>
+                            <input type="checkbox" name="medicalHistory" value="cancer">
+                            <label for="cancer"> Cancer</label><br>
+                            <input type="checkbox" name="medicalHistory" value="cardiac" >
+                            <label for="cardiac"> Cardiac Diseasse</label><br>
+                        </td>
+                        <td>
+                            <input type="checkbox" name="medicalHistory" value="diabetes" >
+                            <label for="diabetes"> Diabetes</label><br>
+                            <input type="checkbox" name="medicalHistory" value="hypertension">
+                            <label for="hypertension"> Hypertension</label><br>
+                            <input type="checkbox" name="medicalHistory" value="psychiactric" >
+                            <label for="psychiactric"> Psychiactric Disorder</label>
+                        </td>
+                        <td>
+                            <input type="checkbox" name="medicalHistory" value="epilepsy">
+                            <label for="epilepsy"> Epilepsy</label><br>
+                            <input type="checkbox" name="medicalHistory" value="others">
+                            <label for="others"> Others</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><label for="symptoms">Current Symptoms</label></th>
+                        <th colspan="2" style="text-align: center;"><label for="cars">Are you taking any medications?</label></th>
+                       
+                    </tr>
+                    <tr>
+                        <td ><select name="symptoms" id="myselect" multiple required>
+                            <option value=" " selected disabled>Select Symptoms</option>
+                            <option value="Chest Pain">Chest Pain</option>
+                            <option value="Respiratory">Respiratory</option>
+                            <option value="Lymphatic">Lymphatic</option> 
+                            <option value="Neurological">Neurological</option> 
+                            <option value="Psychiatric">Psychiatric</option> 
+                            <option value="Gastrointestinal">Gastrointestinal  </option>
+                            <option value="Weight Loss">Weight Loss  </option>
+                          </select>
+                        </td>
+                        <td colspan="2" style="text-align: center; word-spacing: 20px;">
+                            <input type="radio" onclick="yesNoCheck()" name="medication" id="medicationYes" value="Yes">
+                            <label for="medication">Yes</label>
+                            <input type="radio" onclick="yesNoCheck()" name="medication" id="medicationNo" value="No">
+                            <label for="medication">No</label>
+                            <input type="text" id="medBox" disabled="disabled" style="width:50%"; />
+                        </td>
+                      
+                    </tr>
+                </table>
+                <div class="buttons">
+                    <input id="btnRegister" type="submit" value="Register Patient">
+                    <input id="btnCancel" type="reset" value="Reset">
+                </div>
+            </form>
+        </div>
+    </div>
+    
+
+      
+
+<script>
+    let form = document.getElementById('patientForm');
+    let btnRegister = document.getElementById('btnRegister')
+    function yesNoCheck() {
+            var chkYes = document.getElementById("medicationYes");
+            var medBox1 = document.getElementById("medBox");
+            medBox1.disabled = chkYes.checked ? false : true;
+            if (!medBox1.disabled) {
+                medBox1.focus();
+            }
+        }    
+
+
+    btnRegister.addEventListener('click',(e) => {
+        e.preventDefault();
+        let input = document.getElementsByTagName('input')
+        //Gender
+        let genderChosen = document.querySelectorAll("input[name = 'gender']:checked");
+        let genderName = [...genderChosen].map(chosen => chosen.value).join("");
+        //Are you on Medication
+        let medication = document.querySelectorAll("input[name = 'medication']:checked");
+        let medicationChosen = [...medication].map(chosen => chosen.value).join("");
+        var medBox1 = document.getElementById("medBox").value
+        //Medical History
+        let checkboxes1 = document.querySelectorAll(`input[name="medicalHistory"]:checked`);
+        let medHistoryChosen = [...checkboxes1].map(chosen => chosen.value).join(" , ");
+        //Symptoms
+        let checkedItems = document.querySelectorAll("#myselect :checked");
+        let symptomsChecked = [...checkedItems].map(chosen => chosen.value).join(" , ");
+
+    
+        
+        
+        let arr = [];      
+        
+        if((input[1].value != "") && (input[2].value != "") && (input[3].value != "") && (input[4].value != "") && (input[5].value != "") && (input[6].value != "")) {
+           
+            let patientArray = {
+                id: Date.now(),
+                First_Name: input[1].value,
+                Middle_Name: input[2].value,
+                Last_Name: input[3].value,
+                Address: input[4].value,
+                Birthdate: input[5].value,
+                Contact_No: input[6].value,
+                Gender: genderName,
+                Medical_History: medHistoryChosen,
+                Current_Symptoms: symptomsChecked,
+                Is_Patient_On_Medication: medicationChosen,
+                Medication: medBox1
+                
+            }       
+
+           
+
+            arr.push(patientArray)        
+            console.table(arr)            
+            form.reset();
+            console.log(" \n " + JSON.stringify(arr, null, 2));
+            localStorage.setItem('Patient_Information',JSON.stringify(arr))
+            
+        }
+        else
+        {
+            if (input[1].value == "")
+			{
+				input[1].nextElementSibling.textContent = "First Name is empty";
+                setTimeout(()=>{
+					input[1].nextElementSibling.textContent = "";
+				}, 2000);
+			}
+			if (input[2].value == "")
+			{
+				input[2].nextElementSibling.textContent = "Middle Name is empty";	
+                setTimeout(()=>{
+					input[2].nextElementSibling.textContent = "";
+				}, 2000);
+			}
+            if (input[3].value == "")
+			{
+				input[3].nextElementSibling.textContent = "Last Name is empty";	
+                setTimeout(()=>{
+					input[3].nextElementSibling.textContent = "";
+				}, 2000);
+			}
+            if (input[4].value == "")
+			{
+				input[4].nextElementSibling.textContent = "Address is empty";
+                setTimeout(()=>{
+					input[4].nextElementSibling.textContent = "";
+				}, 2000);	
+			}
+            if (input[5].value == "")
+			{
+				input[5].nextElementSibling.textContent = "Birthdate is empty";	
+                setTimeout(()=>{
+					input[5].nextElementSibling.textContent = "";
+				}, 2000);
+			}
+            if (input[6].value == "")
+			{
+				input[6].nextElementSibling.textContent = "Contact No. is empty";	
+                setTimeout(()=>{
+					input[6].nextElementSibling.textContent = "";
+				}, 2000);
+			}
+
+        }  
+  
+    });
+
+    
+
+    
+    
+    
+</script>
+
+
+    
+    
+</body>
+</html>
+</body>
+</html>

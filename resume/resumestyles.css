@@ -1,0 +1,74 @@
+img {width: 100%;
+    height: 100%;
+    float: center;
+    }  
+
+body {   
+    display: flex;
+    justify-content:center;    
+    min-height: 50vh;
+    
+}   
+.resume {
+    position: relative;
+    width:100%;
+    max-width: 1000px;
+    min-height: 100px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.resumeleft {
+    position: relative;
+    background-color: rgb(138, 73, 100);
+    padding: 10px;
+    
+}
+.resumeright {
+    position: relative;
+    background-color: rgb(248, 220, 220);
+    padding: 40px;
+
+}
+.name {
+    text-transform: uppercase; 
+    font-family: Arial; 
+    font-size: 55px; 
+    font-style: italic;
+    text-align: center;
+    margin-top: 20px;
+}
+.category {
+        font-size: x-large;
+        padding: 10px;
+        text-decoration: underline;
+        letter-spacing: 5px;
+        text-align: center; 
+}
+.Title {
+    font-size: 1em;
+    font-weight: bolder;
+s}
+.description {
+        font-size: 1em;
+        padding: 7px;
+}
+td {
+    vertical-align: left;
+}       
+.educationtable {
+    padding: 10px
+}
+img.icons {width: 3em;
+height: 100%; 
+}
+
+table.aboutmecontent {width: max-content;
+                    padding: 10px;
+                    border-spacing: 10px;
+                    word-wrap: break-word;
+}
+table.contactcontent {
+    padding: 1px;
+    
+}

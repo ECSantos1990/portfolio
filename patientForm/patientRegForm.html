@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <title>Document</title>
+    <style>
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        transition: all 0.3s ease;
+        }
+        body {
+        height: 100vh;
+        width: 100%;
+        background-image: linear-gradient(
+    to right top,
+    #2596be,
+    #358bbc,
+    #4780b8,
+    #5974b0,
+    #6867a4,
+    #76609e,
+    #835996,
+    #8e518c,
+    #9e4d86,
+    #ac4a7e,
+    #b94774,
+    #c34668
+  );
+        }
+
+        form{
+        border-radius: 12px;
+        width: 35%;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+        position: absolute;
+        top: 20%;
+        left: 33%;
+        padding: 30px;
+		}
+		div{
+			width: 100%;
+			margin:  2px auto;
+		}
+        .topic {
+        font-size: 20px;
+        font-family: Impact, "Arial Narrow Bold", sans-serif;
+        text-align: center;
+        letter-spacing: 2px;
+        }
+		label{
+			display: block;
+			padding: 10px;
+			font-size: 20px;
+		}
+		input{
+            height: 45px;
+            width: 100%;
+            border-radius: 6px;
+            font-size: 16px;
+            outline: none;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+		}
+		button{
+            margin-top: 20px;
+            outline: none;
+            color: #f2f2f2;
+            font-size: 17px;
+            font-weight: 500;
+            border-radius: 12px;
+            padding: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            background: #c34668;
+            width: 40%;
+            margin-left: 30%;
+		}
+        .buttons input:hover {
+        transform: scale(0.97);
+        }
+		span{
+			display: block;
+		    margin-left: 20px;
+		    color: black;
+		    font-style: italic;
+		}
+    </style>
+</head>
+<body>
+    <form action="patient.html" method="POST">
+		<div>
+            <div class="topic"><h2>Patient Registration Portal</h2></div>
+			<label for="username">Username</label>
+			<input type="text" name="username" placeholder="Enter Username">
+			<span></span>
+		</div>
+		<div>
+			<label for="password">Password</label>
+			<input type="password" name="password" placeholder="Enter Password">
+			<span></span>
+		</div>
+		<button id="log-in">Log-in</button>
+	</form>
+
+<script>
+window.onload = ()=>{
+		this.sessionStorage.setItem('username', 'ecsantos');
+		this.sessionStorage.setItem('password', 'javascript');
+	}
+	
+	let input = document.getElementsByTagName('input');
+	let login = document.getElementById('log-in');
+	let form = document.querySelector('form');
+	form.onsubmit = ()=>{return false;}
+
+	login.onclick = ()=>{
+
+		if ((input[0].value != "") && (input[1].value != ""))
+		 {
+		 	if ((input[0].value == sessionStorage.getItem('username')) && (input[1].value == sessionStorage.getItem('password')))
+		 	 {
+		 	 	form.onsubmit = ()=>{return 1;}
+				  document.cookie = "username="+input[0].value;
+				  document.cookie = "password="+input[1].value;
+		 	 }
+		 	 else
+		 	 {
+		 	 	if ((input[0].value != sessionStorage.getItem('username')) )
+			 	 {
+			 	 	input[0].nextElementSibling.textContent = "Username NOT match";
+					setTimeout(()=>{
+						input[0].nextElementSibling.textContent = "";
+					}, 2000);
+
+			 	 }
+			 	 if ((input[1].value != sessionStorage.getItem('password')) )
+			 	 {
+			 	 	input[1].nextElementSibling.textContent = "Password NOT match";
+					setTimeout(()=>{
+						input[1].nextElementSibling.textContent = "";
+					}, 2000);
+
+			 	 }
+
+		 	 }
+
+		 }
+		else
+		 {
+			if (input[0].value == "")
+			{
+				input[0].nextElementSibling.textContent = "Username is empty";
+				setTimeout(()=>{
+					input[0].nextElementSibling.textContent = "";
+				}, 2000);
+			}
+			if (input[1].value == "")
+			{
+				input[1].nextElementSibling.textContent = "Password is empty";
+				setTimeout(()=>{
+					input[1].nextElementSibling.textContent = "";
+				}, 2000);
+			}
+		 }
+	}
+    
+</script>
+
+      
+
+
+
+
+    
+    
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+
+<body>
+    <center>
+        <table border="1" cellpadding="1" cellspacing="2" width="600" height="400"
+            style="background-color: rgb(241, 216, 216);">
+            <caption style="background-color: rgb(187, 128, 128); font-size: xx-large;">REGISTRATION FORM</caption>
+
+            <tr>
+                <td> <label for="FirstName"> First Name:</label></td>
+                <td colspan="3"> <input type="text" name="FirstName" size="50" maxlength="10"
+                        placeholder="Enter First Name"><br></td>
+            </tr>
+            <tr>
+                <td> <label for="MiddleName"> Middle Name:</label></td>
+                <td colspan="3"> <input type="text" name="MiddleName" size="50" maxlength="10"
+                        placeholder="Enter Middle Name"><br></td>
+            </tr>
+            <tr>
+                <td> <label for="LastName"> Last Name:</label></td>
+                <td colspan="3"> <input type="text" name="LastName" size="50" maxlength="10"
+                        placeholder="Enter Last Name"><br></td>
+            </tr>
+            <tr>
+                <td> <label for="Address"> Address</label></td>
+                <td colspan="3"> <Textarea name="Address" size="50" placeholder="Address Line 1" cols="50"
+                        rows="5"> </Textarea></td>
+            </tr>
+            <tr>
+                <td><label for="Gender"> Gender:</label></td>
+                <td><input type="radio" name="gender" value="Male"> Male </td>
+                <td> <input type="radio" name="gender" value="Female"> Female</td>
+                <td> <input type="radio" name="gender" value="Others"> Others</td>
+            </tr>
+            <tr>
+                <td><label>Career Path Field</label></td>
+                <td colspan="3">
+                    <div style="text-align:center;"><select name="Career">
+                            <option value="frontend">Front-End Developer</option>
+                            <option value="backend">Back-End Developer</option>
+                            <option value="fullstack">Full-Stack Developer</option> <br>
+                        </select> </div>
+                </td>
+            </tr>
+            <tr>
+                <td><label> Technical Skills Field</label></td>
+                <td colspan="3">
+                    <input type="checkbox" name="HTML">HTML
+                    <input type="checkbox" name="CSS"> CSS
+                    <input type="checkbox" name="Mysql"> MySQL
+                    <input type="checkbox" name="Laravel"> Laravel
+                    <input type="checkbox" name="React JS"> React JS
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" style="background-color: darkslategray;">
+                    <div style="text-align:center;"><button type="button"
+                            onclick="alert('Registration Success!')">Submit</button>
+                        <input type="reset">
+                </td>
+            </tr>
+
+        </table>
+    </center>
+</body>
+
+</html>

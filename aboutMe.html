@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+</head>
+<body >
+<header>
+<!--*****************************-->
+<!--Navigation Links*************-->
+<!--*****************************-->
+
+<nav class="navbar">
+    <div class="logo"><a href="#"><span class="slide_transitionRight logoECS"><i>ecs</i></span></a></div>
+    <div class="menu-btn"></div>
+   
+    <div class="navigation">
+      <div class="nav-items">
+        <a href="index.html">Home</a>
+        <a href="aboutMe.html">About Me</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+    <div class="media-icons">
+      <ul class="menu">
+        <li><a href="https://www.facebook.com/zabeth.santos"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a href="https://www.instagram.com/santos.zab/"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="https://ph.linkedin.com/in/elizabeth-santos-b0a551170"><i class="fab fa-linkedin-in"></i></a></li>
+      </ul>     
+    </div>
+    
+  </div>
+</nav>
+<!--*****************************-->
+<!--About Me*********************-->
+<!--*****************************-->
+<section class="about" id="about">
+    <div class="content">
+        <div class="about-details">
+            <div class="left">
+                <img id='imageZab' class="slide_right slide_transitionRight" src="Images/zab4.png">
+            </div>
+            <div class="right">
+                <div class="topic">Here's who I am and What I do</div>
+                <p>Taking Full-stack Web Development as a profession not only to fulfils my pocket but also my heart, because it has been my passion ever since. Knowledgeable in turning user stories, mockups and web designs into functional website using HTML, CSS, Bootstrap and JavaScript.
+                Proficient in creating user interface, troubleshooting simple issues and implementing new features based on user feedback. I also love the logic and structure of coding and always strive to write effecient code.
+                <br><br>
+                When I'm not coding, you'll find me in my bed sleeping or watching netflix with my furbaby.
+                </p>
+                <div class="buttons">
+                    <input type="button" value="Download CV">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+</header>
+<script  >
+    const span = document.getElementById('imageZab'); 
+    
+    const slide = () => {
+    setTimeout(() => {
+            span.classList.remove('slide_right');
+            span.classList.add('slide_rightAfter');
+            }, 1000); 
+    }
+    span.addEventListener('load', slide()); 
+    </script>
+    <script src="script.js" ></script>
+</body>
+</html>

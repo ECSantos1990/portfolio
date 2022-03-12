@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="jelly.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+</head>
+<body >
+<header >
+
+  <div class="jelly-container">
+    <!--*****************************-->
+  <!--Navigation Links*************-->
+  <!--*****************************-->
+
+    <nav class="navbar">
+      <div class="logo"><a href="#"><span class="slide_transitionRight logoECS"><i>ecs</i></span></a></div>
+      <div class="menu-btn"></div>
+     
+      <div class="navigation">
+        <div class="nav-items">
+          <a href="index.html">Home</a>
+          <a href="aboutMe.html">About Me</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div class="media-icons">
+        <ul class="menu">
+          <li><a href="https://www.facebook.com/zabeth.santos"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="https://www.instagram.com/santos.zab/"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="https://ph.linkedin.com/in/elizabeth-santos-b0a551170"><i class="fab fa-linkedin-in"></i></a></li>
+        </ul>     
+      </div>
+      
+    </div>
+    </nav>
+
+ 
+    <div class="bubble-1"></div>
+    <div class="bubble-2"></div>
+    <div class="bubble-3"></div>
+    <div class="bubble-4"></div>
+    <div class="bubble-5"></div>
+    <div class="bubble-6"></div>
+    <div class="bubble-7"></div>
+    <div class="bubble-8"></div>
+    <div class="bubble-9"></div>
+    <div class="bubble-10"></div>
+       <!--*****************************-->
+    <!--welcome Section**************-->
+    <!--*****************************-->
+
+<div class="text-content">
+  <h2>Hi, my name is </h2>  
+  <span id="letterZ" class="slide_right slide_transitionRight"   ><i>Z</i></span>
+  <span id="letterA" class="slide_before slide_transition"><i>A</i></span>
+  <span id="letterB" class="slide_left slide_transitionLeft"><i>B</i></span>
+  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas dolore </p><br>
+  <div class="buttons">
+      <input type="button" value="Hire Me">
+  </div>
+  
+</div>
+    <div class="jelly-wrapper">
+      <div class="jelly-body">
+        <div class="jelly-inner">
+        </div>
+      </div>
+      <div class="jelly-tentacle-1"></div>
+      <div class="jelly-tentacle-2"></div>
+      <div class="jelly-tentacle-3"></div>
+      <div class="jelly-tentacle-4"></div>
+      <div class="jelly-tentacle-5"></div>
+    </div>
+    <div class="jelly-shadow"></div>
+    <div class="bubble-11"></div>
+    <div class="bubble-12"></div>
+    <div class="bubble-13"></div>
+    <div class="bubble-14"></div>
+    <div class="bubble-15"></div>
+    <div class="bubble-16"></div>
+    <div class="bubble-17"></div>
+    <div class="bubble-18"></div>
+    <div class="bubble-19"></div>
+    <div class="bubble-20"></div>
+  </div>
+
+
+
+
+
+</header>
+<script src="script.js" ></script>
+<script>
+
+const span = document.getElementById('letterZ'); 
+const span1 = document.getElementById('letterA'); 
+const span2 = document.getElementById('letterB'); 
+
+const slide = () => {
+setTimeout(() => {
+        span.classList.remove('slide_right');
+        span.classList.add('slide_rightAfter');
+        span1.classList.remove('slide_before');
+        span1.classList.add('slide_after'); 
+        span2.classList.remove('slide_left');
+        span2.classList.add('slide_leftAfter'); 
+    }, 1000); 
+
+}
+
+span.addEventListener('load', slide()); 
+</script>
+
+
+
+</body>
+</html>
