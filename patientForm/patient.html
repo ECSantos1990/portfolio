@@ -97,17 +97,7 @@
        
     </style>
 </head>
-<body>
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
 
-    <title>Patient Form</title>
-</head>
 <body>
     <div class="formContainer">
         <div class="formHeading">
@@ -146,7 +136,7 @@
                      <tr>
                         <td> <input type="date" name="birthday" name="birthday">
                         <span></span></td> 
-                        <td> <input type="number" name="contactNo" name="contactNo" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==11) return false;" /><span></span></td> 
+                        <td> <input type="number" name="contactNo" name="contactNo" onKeyPress="if(this.value.length==11) false;" /><span></span></td> 
                         <td>  <input type="radio" name="gender" value="male">
                             <label for="gender">Male</label>
                             <input type="radio" name="gender" value="female">
@@ -268,9 +258,7 @@
                 Is_Patient_On_Medication: medicationChosen,
                 Medication: medBox1
                 
-            }       
-
-           
+            }               
 
             arr.push(patientArray)        
             console.table(arr)            
