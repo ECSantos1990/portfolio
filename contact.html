@@ -17,7 +17,7 @@
 <!--*****************************-->
 
 <nav class="navbar">
-  <div class="logo"><a href="#"><span class="slide_transitionRight logoECS"><i>ecs</i></span></a></div>
+  <div class="logo"><a href="index.html"><span class="slide_transitionRight logoECS"><i>ecs</i></span></a></div>
   <div class="menu-btn"></div>
  
   <div class="navigation">
@@ -54,30 +54,63 @@
   </div>
 <div class="containerContact">
   <div class="contentContact">
-  <form action="#" >
+  <form action="#" id="sendForm" >
     <div class="topic">Send Message</div>
-    <div class="input-box">
-      <input type="text" required>
-      <label>Enter your name</label>
-    </div>
-    <div class="input-box">
-      <input type="text" required>
-      <label>Enter your email</label>
-    </div>
-    <div class="input-box">
-      <input type="text" required>
-      <label>Enter your message</label>
-    </div>
-    <div class="input-box">
-      <input type="submit" value="Send Message">
-    </div>
+          <div class="input-box">
+            <input type="text" name="name" required>
+            <label>Enter your name</label>
+          </div>
+          <div class="input-box">
+            <input type="text" name="email" required>
+            <label>Enter your email</label>
+          </div>
+          <div class="input-box">
+            <input type="text" name="message" required>
+            <label>Enter your message</label>
+          </div>
+          <div class="input-box">
+            <input id="btnRegister" type="submit" value="Send Message">
+          </div>
   </form>
 </div>
 
 </div>
 
 </section>
-<script src="script.js" ></script>
+<script src="script.js" >
+</script>
+
+<script>
+  let btnRegister = document.getElementById('btnRegister');
+  let input = document.getElementsByTagName('input')
+  let form = document.getElementById('sendForm');
+
+
+  let arr = []
+  btnRegister.addEventListener('click',() => {
+      
+        if((input[0].value != "") && (input[1].value != "") && (input[2].value != "")) {
+          let messageArray = {
+                id: Date.now(),
+                name: input[0].value,
+                email: input[1].value,
+                message: input[2].value,                
+            }               
+            // alert("hello")
+            arr.push(messageArray)        
+            console.table(arr)           
+            console.log(" \n " + JSON.stringify(arr, null, 2));
+            localStorage.setItem('Message',JSON.stringify(arr))
+            form.reset()
+            const sendMessage = JSON.parse(localStorage.getItem('Message'));
+            let name = "";
+            for (const key in sendMessage) {
+              name = sendMessage[key].name;
+            }
+            alert(`Thank you for your message ${name}.`)
+        }
+  });
+</script>
   
  
 </header>
