@@ -375,12 +375,16 @@ section .buttons {
 .container .main-card {
   display: flex;
   justify-content: space-evenly;
-  width: 200%;
+  width: 300%;
   transition: 1s;
 }
 #two:checked ~ .main-card {
   margin-left: -100%;
 }
+#three:checked ~ .main-card {
+  margin-left: -200%;
+}
+
 .container .main-card .cards {
   width: calc(100% / 2 - 30px);
   display: flex;
@@ -441,10 +445,25 @@ section .buttons {
 #one:checked ~ .nextBtn .two {
   width: 15px;
 }
+#one:checked ~ .nextBtn .three {
+  width: 15px;
+}
 #two:checked ~ .nextBtn .one {
   width: 15px;
 }
 #two:checked ~ .nextBtn .two {
+  width: 35px;
+}
+#two:checked ~ .nextBtn .three {
+  width: 15px;
+}
+#three:checked ~ .nextBtn .one {
+  width: 15px;
+}
+#three:checked ~ .nextBtn .two {
+  width: 15px;
+}
+#three:checked ~ .nextBtn .three {
   width: 35px;
 }
 input[type="radio"] {
